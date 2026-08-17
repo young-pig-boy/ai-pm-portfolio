@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SnackOps 零食电商客服 Agent 与运营评测平台项目案例。">
+  <title>SnackOps｜AI 产品经理项目作品集</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body data-project="snackops">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="主要导航">
+      <a class="brand" href="../"><span class="brand-mark">CJ</span><span>AI 产品经理作品集</span></a>
+      <div class="nav-links">
+        <a href="#solution">产品方案</a>
+        <a href="#evidence">产品证据</a>
+        <a href="#validation">验证复盘</a>
+        <a href="../resume-expert/">下一个项目</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="project-head">
+      <div class="container">
+        <p class="eyebrow">01 · CUSTOMER SERVICE AGENT</p>
+        <h1>SnackOps：零食电商客服 Agent 与运营评测平台</h1>
+        <p class="lead">用两种执行方案覆盖相同的客服任务：Coze Workflow 固定编排高频流程，Planner 根据问题动态组合 Skill 与 Tool；两种模式统一进入运行追踪、评测和运营复盘。</p>
+        <dl class="project-meta">
+          <div><dt>角色</dt><dd>独立产品负责人 / Vibe Coding</dd></div>
+          <div><dt>周期</dt><dd>2026.06 - 至今</dd></div>
+          <div><dt>核心用户</dt><dd>客服运营、产品与数据分析</dd></div>
+          <div><dt>当前阶段</dt><dd>可运行 MVP / 小范围验证</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <section class="hero-media">
+      <div class="container">
+        <figure class="shot">
+          <img class="zoomable" src="../assets/snackops-workbench.png" alt="SnackOps 客服 Agent 工作台，包含输入、计划、执行链路、最终回复和风险状态">
+          <figcaption>客服 Agent 工作台：将计划、执行步骤、回复与风险结果放在同一页面中。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="problem">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-index">01 / 问题定义</div>
+          <div><h2>不只解决“能不能回答”，还要解决“为什么这样回答”</h2><p class="section-intro">客服需要查数据、遵循业务规则并对错误负责；运营需要知道 Agent 哪一步失败、修改后是否真正改善。</p></div>
+        </div>
+        <div class="three-col">
+          <article class="content-block"><h3>客服口径不一致</h3><p>商品推荐、优惠和售后依赖人工经验，同类问题可能得到不同答案。</p></article>
+          <article class="content-block"><h3>业务事实不可编造</h3><p>价格、库存、订单和物流必须来自业务数据，模型不能凭记忆生成。</p></article>
+          <article class="content-block"><h3>效果难以复盘</h3><p>只看最终回复无法定位 Planner、Skill、Tool 或风险检查中的具体问题。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="solution">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-index">02 / 产品方案</div>
+          <div><h2>同一套业务场景，两种不同的执行方式</h2><p class="section-intro">两种模式不是节点之间的一一转换，而是共享客服场景、数据能力和评测标准。</p></div>
+        </div>
+        <div class="two-col">
+          <article class="content-block">
+            <h3>Coze Workflow：固定流程</h3>
+            <p>围绕订单、售后、商品咨询、优惠和投诉五类意图，显式设计补问、查询、判断、回复和兜底分支，适合顺序明确、风险较高的任务。</p>
+            <ul class="plain-list">
+              <li><b>1</b><span>节点和分支可视化，便于检查业务规则。</span></li>
+              <li><b>2</b><span>信息不足先补问，查询失败明确兜底。</span></li>
+              <li><b>3</b><span>流程可控，但链路较长、维护成本较高。</span></li>
+            </ul>
+          </article>
+          <article class="content-block">
+            <h3>Planner：动态能力组合</h3>
+            <p>将需求提取、推荐决策、售后分类、风险检查等拆成 Skill，将商品、优惠、订单和物流查询拆成 Tool，由 Planner 根据问题选择组合。</p>
+            <ul class="plain-list">
+              <li><b>1</b><span>Skill 负责理解、判断和回复生成。</span></li>
+              <li><b>2</b><span>Tool 负责读取真实业务数据和计算结果。</span></li>
+              <li><b>3</b><span>更灵活，但必须增加能力校验和透明降级。</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tint">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-index">03 / 核心链路</div>
+          <div><h2>商品推荐不是直接生成文案，而是先建立事实基础</h2><p class="section-intro">预算、口味和限制条件决定查询与筛选，关键字段缺失时不应直接下结论。</p></div>
+        </div>
+        <ol class="flow">
+          <li><span>STEP 01</span><strong>识别意图</strong><small>判断推荐、订单、售后、优惠或投诉。</small></li>
+          <li><span>STEP 02</span><strong>提取与补问</strong><small>获取预算、口味、场景和限制条件。</small></li>
+          <li><span>STEP 03</span><strong>查询业务数据</strong><small>调用商品、活动、优惠、订单或物流 Tool。</small></li>
+          <li><span>STEP 04</span><strong>判断与生成</strong><small>基于真实结果筛选并组织客服回复。</small></li>
+          <li><span>STEP 05</span><strong>风险与兜底</strong><small>检查夸大、隐私、安全与人工接管条件。</small></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="evidence">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-index">04 / 产品证据</div>
+          <div><h2>从客服执行到运营评测的完整产品界面</h2><p class="section-intro">页面截图来自当前可运行项目，用于证明产品链路已经落地；截图中的演示统计不作为业务成果。</p></div>
+        </div>
+        <div class="evidence-grid">
+          <figure class="shot"><img class="zoomable" src="../assets/snackops-evals.png" alt="SnackOps 评测中心批次结果页面"><figcaption>评测中心：选择场景用例、运行批次并查看逐条结果。</figcaption></figure>
+          <figure class="shot"><img class="zoomable" src="../assets/snackops-ops.png" alt="SnackOps 运营中心运行监控页面"><figcaption>运营中心：从异常运行进入评分、标注和改进建议。</figcaption></figure>
+          <figure class="shot wide"><img class="zoomable" src="../assets/coze-recommend.png" alt="Coze 商品推荐工作流真实运行截图"><figcaption>Coze 商品推荐：需求提取、商品筛选、推荐回复与合规检查。订单查询截图因包含个人信息未放入公开作品集。</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="validation">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-index">05 / 验证复盘</div>
+          <div><h2>一次“低糖坚果”对照暴露了数据前提问题</h2><p class="section-intro">同一输入分别进入 Coze 与 Planner，比较最终回复、业务数据、耗时和失败行为。这是工程对照验证，不等同于正式线上 A/B 实验。</p></div>
+        </div>
+        <table class="compare">
+          <thead><tr><th>方案</th><th>实际观察</th><th>产品结论</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Coze Workflow</strong></td><td>真实运行约 73.6 秒；因没有可确认的糖分数据，保守返回无匹配结果。</td><td>流程明确且保守，但响应较慢，需要缩短链路并优化无匹配话术。</td></tr>
+            <tr><td><strong>Planner</strong></td><td>一次真实 Provider 调用失败后约 11.1 秒透明降级；返回预算内商品，但商品糖分字段为“未提供”。</td><td>动态方案更灵活，但必须将关键字段完整性设置为推荐前置条件。</td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><h3>从改 Prompt 转向改产品规则</h3><p>根因不是推荐文案不好，而是系统没有把“关键筛选字段缺失”定义为阻断条件。下一轮方案是建立硬条件与数据字段映射，缺字段时进入澄清或兜底，并将案例沉淀为回归用例。</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-index">06 / 结果与边界</div>
+          <div><h2>可核验的交付，以及没有被包装的指标</h2></div>
+        </div>
+        <div class="two-col">
+          <article class="content-block"><h3>当前交付</h3><p>完成双模式客服 Agent、客服工作台、运行记录、评测中心和运营中心；接入 50 个 SKU 及商品、优惠、订单、物流等业务数据，支持 Bad Case 定位和复测。</p></article>
+          <article class="content-block"><h3>下一阶段</h3><p>补齐商品营养字段与数据来源，扩大真实客服用例；建立任务成功率、关键事实正确率、人工接管率、平均响应时间和单位调用成本的稳定口径。</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><strong>SnackOps · 陈洁</strong><span><a href="../resume-expert/">查看简历专家项目 →</a></span></div></footer>
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="图片预览"><button class="lightbox-close" type="button" aria-label="关闭图片预览">×</button><img alt=""></div>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
